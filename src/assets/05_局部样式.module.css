@@ -1,7 +1,7 @@
 .box2 {
-    background: blue;
+    color: blue;
 }
 /* 断线写法 */
 .box2-head{
-    background: yellow;
+    color: rgb(222, 97, 141);
 }
