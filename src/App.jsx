@@ -21,6 +21,15 @@ import React_16 from './assets/19_记忆多状态.jsx'
 import React_17 from './assets/20_状态的快照及快照陷阱.jsx'
 import React_18 from './assets/21_状态队列与自动批处理.jsx'
 import React_19 from './assets/22_要严格遵守状态是不可变的.jsx'
+import React_20 from './assets/23_常见的对象和数组修改的解决方案.jsx'
+import React_21 from './assets/24_immer 简化不可变对象操作.jsx'
+import React_22 from './assets/25_惰性初始化状态的值.jsx'
+import React_23 from './assets/26_状态提升来解决共享问题.jsx'
+import React_24 from './assets/27_状态的重置处理问题.jsx'
+import React_25 from './assets/28_利用状态产生计算变量.jsx'
+
+
+
 
 
 
@@ -63,6 +72,13 @@ function App() {
             <React_17></React_17>
             <React_18></React_18>
             <React_19></React_19>
+            <React_20></React_20>
+            <React_21></React_21>
+            <React_22></React_22>
+            <React_23></React_23>
+            <React_24></React_24>
+            <React_25></React_25>
+
         </>
     );
 }
