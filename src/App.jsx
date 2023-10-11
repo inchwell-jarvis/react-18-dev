@@ -27,6 +27,15 @@ import React_22 from './assets/25_惰性初始化状态的值.jsx'
 import React_23 from './assets/26_状态提升来解决共享问题.jsx'
 import React_24 from './assets/27_状态的重置处理问题.jsx'
 import React_25 from './assets/28_利用状态产生计算变量.jsx'
+import React_26 from './assets/29_受控组件与非受控组件.jsx'
+import React_27 from './assets/30_实战案例任务列表.jsx'
+import React_28 from './assets/31_ref引用值.jsx'
+import React_29 from './assets/32_ref操作DOM.jsx'
+import React_30 from './assets/33_ref添加到组件.jsx'
+import React_31 from './assets/34_useImperativeHandle自定义ref的暴露.jsx'
+import React_32 from './assets/35_纯函数如何处理副作用useEffect基本使用.jsx'
+
+
 
 
 
@@ -78,7 +87,13 @@ function App() {
             <React_23></React_23>
             <React_24></React_24>
             <React_25></React_25>
-
+            <React_26></React_26>
+            <React_27></React_27>
+            <React_28></React_28>
+            <React_29></React_29>
+            <React_30></React_30>
+            <React_31></React_31>
+            <React_32></React_32>
         </>
     );
 }
