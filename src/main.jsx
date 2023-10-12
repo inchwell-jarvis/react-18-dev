@@ -11,7 +11,7 @@ import "./index.css";
 // 使用 ReactDOM 的 createRoot 方法，将根元素获取并创建根渲染器，然后渲染应用
 ReactDOM.createRoot(document.getElementById("root")).render(
     // 使用 React 的 StrictMode 包装 App 组件，以启用严格模式   注释React.StrictMode标签后关闭严格模式
-    <React.StrictMode>
+    // <React.StrictMode>
         <App />
-    </React.StrictMode>
+    // </React.StrictMode>
 );
