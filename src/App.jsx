@@ -1,6 +1,5 @@
 // 引入 React 的 useState 钩子
-import { useState } from "react";
-
+// import { useState } from "react";
 
 // import React_01 from './assets/01_了解JSX'
 // import React_02 from './assets/02_JSX与HTML的语法区别'
@@ -37,27 +36,30 @@ import { useState } from "react";
 // import React_33 from './assets/36_分开处理副作用useEffect的依赖项的使用.jsx'
 // import React_34 from './assets/37_尽量在useEffect内定义函数.jsx'
 // import React_35 from './assets/38_useEffect清理操作的重要性.jsx'
-import React_36 from './assets/39_Reducer统一的状态管理集合.jsx'
+// import React_36 from './assets/39_Reducer统一的状态管理集合.jsx'
 
-
-
-
-
-
-
-
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./views/Home";
+import About from "./views/About";
+import Signin from "./views/Signin";
 
 // 引入应用的样式文件
-import "./App.css";
+import "./App.scss";
 
 // 定义名为 App 的函数组件
 function App() {
     return (
         // 使用空的尖括号表示 React 片段
         <>
-            <h1>Vite + React + JarvisDowney</h1>
-      
-            <React_36></React_36>
+            <BrowserRouter>
+                {/* <Link to='/'>Home</Link>
+                <Link to='/about'>About</Link> 注册路由 */}
+                <Routes>
+                    <Route path='/' element={<Signin />}></Route>
+                    <Route path='/home/*' element={<Home />}></Route>
+                    <Route path='/about' element={<About />}></Route>
+                </Routes>
+            </BrowserRouter>
         </>
     );
 }
