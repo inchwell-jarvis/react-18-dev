@@ -1,0 +1,7 @@
+.menu{
+    width: 250px;
+    height: calc(100% - 45px);
+    background: linear-gradient(to bottom, #fff1e6,  #ebffec);
+    /* linear-gradient(to top, #d08f5f 0%, #f9773f 100%) */
+    float: left;
+}
