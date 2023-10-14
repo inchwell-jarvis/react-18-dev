@@ -7,14 +7,14 @@ import Index3 from "./component/index3";
 import Menu from "./component/menu";
 import Header from "./component/header";
 export default function About() {
-
+    // 登录页传输过来的数据
     const paramState = useLocation().state
     console.log(paramState);
     
     // const navigate = useNavigate(); // 获取导航函数
     return (
         <div className='homeBox animate__animated animate__fadeIn'>
-            <Header></Header>
+            <Header role={paramState.role}></Header>
             <Menu></Menu>
 
 

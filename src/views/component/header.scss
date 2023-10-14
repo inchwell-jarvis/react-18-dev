@@ -1,0 +1,72 @@
+.header{
+    width: 100%;
+    height: 45px;
+    background: #ffffff;
+    /* border-bottom: 1px solid #ccc; */
+    box-sizing: border-box;
+    box-shadow: 0 0px 12px 0 rgba(15, 15, 15, 0.6);
+    .headerLeft{
+        width: 250px;
+        height: 100%;
+        padding: 5px;
+        box-sizing: border-box;
+        float: left;
+        .logo{
+            width: 35px;
+            height: 35px;
+            background: url("/public/logo.png");   
+            background-size: 100%;
+            margin-left: 20px;
+            float: left;
+        }
+        .name{
+            width: 100px;
+            height: 35px;
+            float: left;
+            line-height: 35px;
+            padding-left: 20px;
+            font-weight: bold;
+            font-size: 20px;
+            /* 在不同浏览器上使用不同前缀，确保兼容性 */
+                /* -webkit- 是为了兼容旧版WebKit浏览器（如Safari） */
+                /* -moz- 是为了兼容Firefox浏览器 */
+                /* -o- 是为了兼容Opera浏览器 */
+                /* 不使用前缀是为了兼容大多数现代浏览器 */
+
+                /* 创建文本颜色渐变 */
+                background-image: linear-gradient(
+                    to top,
+                    #d08f5f 0%,
+                    #f9773f 100%
+                );
+                -webkit-background-clip: text;
+                -moz-background-clip: text;
+                background-clip: text;
+
+                /* 设置文本颜色，这会让文本内容显示为渐变 */
+                color: transparent;
+        }
+    }
+    .headerRight{
+        width: calc(100% - 250px);
+        height: 100%;
+        float: left;
+        .personalInformation{
+            width: 500px;
+            height: 100%;
+            background: #000;
+            float: right;
+            padding: 5px;
+            box-sizing: border-box;
+            .avatar{
+                width: 35px;
+                height: 35px;
+                float: right;
+                img{
+                    width: 35px;
+                    height: 35px;
+                }
+            }
+        }
+    }
+}
