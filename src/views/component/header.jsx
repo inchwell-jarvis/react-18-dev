@@ -33,7 +33,7 @@ function Header({ role }) {
                     {/* 个人信息部分 */}
                     <div className="personalInformation">
                         <div className="avatar">
-                            <img src={avatarUrl} alt="" />
+                            <img src='/avatar1.png' alt="" />
                         </div>
 
 

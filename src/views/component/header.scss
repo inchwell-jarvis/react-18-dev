@@ -54,7 +54,7 @@
         .personalInformation{
             width: 500px;
             height: 100%;
-            background: #000;
+            border-left: 1px solid #ccc;
             float: right;
             padding: 5px;
             box-sizing: border-box;
@@ -62,9 +62,13 @@
                 width: 35px;
                 height: 35px;
                 float: right;
+                background: #3883f7;
+                border-radius: 6px;
+                padding: 4px;
+                box-sizing: border-box;
                 img{
-                    width: 35px;
-                    height: 35px;
+                    width: 100%;
+                    height: 100%;
                 }
             }
         }
