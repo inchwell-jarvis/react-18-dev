@@ -1,38 +1,41 @@
-import { Route, Routes, useNavigate, useLocation   } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
+import PropTypes from "prop-types";
 
-import Index1 from "./component/index1";
+// import Index1 from "./component/index1";
+import Chat from "./component/chat/chat";
 import Index2 from "./component/index2";
 import Index3 from "./component/index3";
 
-import Menu from "./component/menu";
-import Header from "./component/header";
-export default function About() {
+import Menu from "./component/menu/menu";
+import Header from "./component/header/header";
+function Home({ socket }) {
     // 登录页传输过来的数据
     const paramState = useLocation().state
-    console.log(paramState);
-    
+    // console.log(paramState);
+
+
+
+
+    // 组件参数类型限定
+    Home.propTypes = {
+        // 发送消息函数 传递子级使用
+        socket: PropTypes.func
+    }
+
+
     // const navigate = useNavigate(); // 获取导航函数
     return (
         <div className='homeBox animate__animated animate__fadeIn'>
+            {/* 头部 */}
             <Header role={paramState.role}></Header>
-            <Menu></Menu>
-
 
             {/* 菜单 */}
-            {/* <div className='left'>
-                <button onClick={() => navigate("/")}>前往Signin</button><br />
-                <button onClick={() => navigate("/home")}>前往inde1</button><br />
+            <Menu></Menu>
 
-                <button onClick={() => navigate("/home/index2")}>前往/home/index2</button><br />
-                <button onClick={() => navigate("/home/index3")}>前往/home/index3</button><br />
-
-
-                欢迎 {paramState.role}
-            </div> */}
             {/* 子级 */}
             <div className='right'>
                 <Routes>
-                    <Route path='/' element={<Index1 />} />
+                    <Route path='/' element={<Chat socket={socket} paramState={paramState} />} />
                     <Route path='/index2' element={<Index2 />} />
                     <Route path='index3' element={<Index3 />} />
                 </Routes>
@@ -40,3 +43,5 @@ export default function About() {
         </div>
     );
 }
+
+export default Home

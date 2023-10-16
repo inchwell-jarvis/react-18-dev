@@ -1,25 +1,25 @@
-.header{
+.header {
     width: 100%;
     height: 45px;
     background: #ffffff;
     /* border-bottom: 1px solid #ccc; */
     box-sizing: border-box;
     box-shadow: 0 0px 12px 0 rgba(15, 15, 15, 0.6);
-    .headerLeft{
+    .headerLeft {
         width: 250px;
         height: 100%;
         padding: 5px;
         box-sizing: border-box;
         float: left;
-        .logo{
+        .logo {
             width: 35px;
             height: 35px;
-            background: url("/public/logo.png");   
+            background: url("/public/logo.png");
             background-size: 100%;
             margin-left: 20px;
             float: left;
         }
-        .name{
+        .name {
             width: 100px;
             height: 35px;
             float: left;
@@ -28,37 +28,33 @@
             font-weight: bold;
             font-size: 20px;
             /* 在不同浏览器上使用不同前缀，确保兼容性 */
-                /* -webkit- 是为了兼容旧版WebKit浏览器（如Safari） */
-                /* -moz- 是为了兼容Firefox浏览器 */
-                /* -o- 是为了兼容Opera浏览器 */
-                /* 不使用前缀是为了兼容大多数现代浏览器 */
+            /* -webkit- 是为了兼容旧版WebKit浏览器（如Safari） */
+            /* -moz- 是为了兼容Firefox浏览器 */
+            /* -o- 是为了兼容Opera浏览器 */
+            /* 不使用前缀是为了兼容大多数现代浏览器 */
 
-                /* 创建文本颜色渐变 */
-                background-image: linear-gradient(
-                    to top,
-                    #d08f5f 0%,
-                    #f9773f 100%
-                );
-                -webkit-background-clip: text;
-                -moz-background-clip: text;
-                background-clip: text;
+            /* 创建文本颜色渐变 */
+            background-image: linear-gradient(to top, #d08f5f 0%, #f9773f 100%);
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-clip: text;
 
-                /* 设置文本颜色，这会让文本内容显示为渐变 */
-                color: transparent;
+            /* 设置文本颜色，这会让文本内容显示为渐变 */
+            color: transparent;
         }
     }
-    .headerRight{
+    .headerRight {
         width: calc(100% - 250px);
         height: 100%;
         float: left;
-        .personalInformation{
+        .personalInformation {
             width: 500px;
             height: 100%;
             border-left: 1px solid #ccc;
             float: right;
             padding: 5px;
             box-sizing: border-box;
-            .avatar{
+            .avatar {
                 width: 35px;
                 height: 35px;
                 float: right;
@@ -66,10 +62,23 @@
                 border-radius: 6px;
                 padding: 4px;
                 box-sizing: border-box;
-                img{
+                img {
                     width: 100%;
                     height: 100%;
                 }
+            }
+
+            .logOut {
+                width: 60px;
+                height: 35px;
+                float: right;
+                // background: #9b8e8e;
+                line-height: 35px;
+                font-size: 14px;
+                text-align: center;
+                margin-right: 40px;
+                color: red;
+                cursor: pointer;
             }
         }
     }

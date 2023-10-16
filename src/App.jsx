@@ -37,17 +37,51 @@
 // import React_34 from './assets/37_尽量在useEffect内定义函数.jsx'
 // import React_35 from './assets/38_useEffect清理操作的重要性.jsx'
 // import React_36 from './assets/39_Reducer统一的状态管理集合.jsx'
-
+// 引入应用的样式文件
+import "./App.scss";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./views/Home";
 import About from "./views/About";
 import Signin from "./views/Signin";
 
-// 引入应用的样式文件
-import "./App.scss";
+
 
 // 定义名为 App 的函数组件
 function App() {
+    // const socket = new WebSocket('ws://localhost:3000');
+    const socket = new WebSocket('ws://82.157.236.215:3000');
+
+    // WebSocket连接建立时的回调函数
+    socket.onopen = function () {
+        console.log('WebSocket连接已建立');
+    };
+
+    // // 接收到消息时的回调函数
+    // socket.onmessage = function (event) {
+    //     const data = JSON.parse(event.data);
+    //     // 推送数据有内容  且 最后一条 和 当前最后一条不是同一条
+    //     console.log(data)
+    // };
+
+    // 连接关闭时的回调函数
+    socket.onclose = function () {
+        console.log('WebSocket连接已关闭');
+    };
+
+    // 发生错误时的回调函数
+    socket.onerror = function (error) {
+        console.error('WebSocket发生错误:', error);
+    };
+
+    // // 发送消息
+    // const sendMsg = (value) => {
+    //     // 向服务器发送消息
+    //     socket.send(value);
+    // }
+
+
+
+
     return (
         // 使用空的尖括号表示 React 片段
         <>
@@ -56,7 +90,7 @@ function App() {
                 <Link to='/about'>About</Link> 注册路由 */}
                 <Routes>
                     <Route path='/' element={<Signin />}></Route>
-                    <Route path='/home/*' element={<Home />}></Route>
+                    <Route path='/home/*' element={<Home socket={socket} />}></Route>
                     <Route path='/about' element={<About />}></Route>
                 </Routes>
             </BrowserRouter>
